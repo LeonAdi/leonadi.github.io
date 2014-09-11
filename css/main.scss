@@ -1,7 +1,7 @@
 ---
 ---
 // Import partials from `sass_dir` (defaults to `_sass`)
-//@import "syntax-highlighting";
+@import "syntax-highlighting";
 @import "susy";
 @import url(http://fonts.googleapis.com/css?family=Raleway:900,600,500,300,700,400,200,100,800);
 
@@ -83,6 +83,8 @@ body {
   background: #eee;
   padding: 25px 200px 50px;
   z-index: 100;
+  //box-shadow: 0 0 15px 0px #222;
+  border-top: 3px solid rgba(0, 0, 0, 0.7);
 }
 
 .article img {
@@ -125,6 +127,12 @@ body {
 
 .sidebar-nav li {
   margin-bottom: 15px;
+}
+
+.logo {
+  max-width: 50%;
+  display: block;
+  margin: 25px auto 50px;;
 }
 
 @media (max-width: 1024px) {
