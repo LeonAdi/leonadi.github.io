@@ -1,0 +1,15 @@
+---
+layout: default
+thumb: http://lorempixel.com/1920/512/cats
+---
+
+{% for post in site.posts %}
+    <p class="post-meta">{{ post.date | date: "%-d. %b %Y" }}</p>
+
+    <h1 class="article-title">
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h1>
+    <p>
+      {{post.content | strip_html | truncatewords: 300}}
+    </p>
+{% endfor %}

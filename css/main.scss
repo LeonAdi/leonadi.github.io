@@ -1,0 +1,142 @@
+---
+---
+// Import partials from `sass_dir` (defaults to `_sass`)
+//@import "syntax-highlighting";
+@import "susy";
+@import url(http://fonts.googleapis.com/css?family=Raleway:900,600,500,300,700,400,200,100,800);
+
+$susy: (
+  columns: 12,
+  gutters: 0
+);
+
+$sidebar-width: 2;
+
+
+body {
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
+  background: #444;
+  line-height: 26px;
+}
+
+.dark {
+  background: #222;
+  color: #fff;
+}
+
+.sidebar {
+  @include span($sidebar-width);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.sidebar-nav a:hover {
+  color: #aaa;
+}
+
+.main {
+  @include span(12 - $sidebar-width);
+  margin-left: span($sidebar-width);
+}
+
+.light {
+  background: #eee;
+}
+
+.pad {
+  padding: 0 15px;
+}
+
+.article-thumb {
+  position: relative;
+  width: span(12 - $sidebar-width);
+  height: 384px;
+  background-size: cover;
+  background-position: center top;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.article {
+  position: relative;
+  margin-top: 384px;
+  background: #eee;
+  padding: 25px 200px 50px;
+  z-index: 100;
+}
+
+.article img {
+  display: block;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.article-title {
+  font-size: 34px;
+  text-align: center;
+}
+
+.article-title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.article-title a:hover {
+  color: #555;
+}
+
+.main-fixed {
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  background: #eee;
+}
+
+.page-footer {
+  text-align: center;
+  height: 100px;
+  border-top: 3px solid #333;
+}
+
+.post-meta {
+  color: #777;
+  text-align: right;
+}
+
+.sidebar-nav li {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    @include span($sidebar-width + 1);
+  }
+  .article {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .main {
+    @include span(12 - ($sidebar-width + 1));
+    margin-left: span($sidebar-width + 1);
+  }
+}
