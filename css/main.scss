@@ -1,10 +1,15 @@
 ---
 ---
-// Import partials from `sass_dir` (defaults to `_sass`)
+
+//IMPORTS
 @import "syntax-highlighting";
 @import "susy";
+@import "font-awesome";
+
 @import url(http://fonts.googleapis.com/css?family=Raleway:900,600,500,300,700,400,200,100,800);
 
+
+//CONFIGURE SUSY
 $susy: (
   columns: 12,
   gutters: 0
@@ -12,6 +17,11 @@ $susy: (
 
 $sidebar-width: 2;
 
+//FIXES
+html, body {
+  height:100%;
+  min-height:100%;
+}
 
 body {
   font-family: "Raleway";
@@ -21,11 +31,21 @@ body {
   line-height: 26px;
 }
 
+//UTILITY CLASSES
+.light {
+  background: #eee;
+}
+
+.pad {
+  padding: 0 15px;
+}
+
 .dark {
   background: #222;
   color: #fff;
 }
 
+//SIDEBAR
 .sidebar {
   @include span($sidebar-width);
   position: fixed;
@@ -38,27 +58,57 @@ body {
   padding-left: 0;
 }
 
-.sidebar-nav a {
+.sidebar a {
   color: #fff;
   text-decoration: none;
   font-weight: 200;
 }
 
-.sidebar-nav a:hover {
+.sidebar a:hover {
   color: #aaa;
 }
 
+.sidebar-bottom {
+  position: absolute;
+  bottom: 15px;
+}
+
+.sidebar-nav li {
+  margin-bottom: 15px;
+}
+
+.logo {
+  max-width: 50%;
+  display: block;
+  margin: 25px auto 50px;;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  font-size: 24px;
+  background: #222;
+  color: white;
+  border: none;
+  outline: none;
+  display: none;
+  margin: 0;
+}
+
+.sidebar-toggle:hover {
+  background: #444;
+}
+
+.sidebar-toggle:active {
+  background: #333;
+}
+
+//MAIN PANE
 .main {
   @include span(12 - $sidebar-width);
   margin-left: span($sidebar-width);
-}
-
-.light {
-  background: #eee;
-}
-
-.pad {
-  padding: 0 15px;
 }
 
 .article-thumb {
@@ -128,17 +178,8 @@ body {
   margin-bottom: 0;
 }
 
-.sidebar-nav li {
-  margin-bottom: 15px;
-}
-
-.logo {
-  max-width: 50%;
-  display: block;
-  margin: 25px auto 50px;;
-}
-
-@media (max-width: 1024px) {
+//RESPONSIVE OVERRIDE
+@media (max-width: 1280px) {
   .sidebar {
     @include span($sidebar-width + 1);
   }
@@ -149,5 +190,33 @@ body {
   .main {
     @include span(12 - ($sidebar-width + 1));
     margin-left: span($sidebar-width + 1);
+  }
+
+  .article-thumb {
+    width: span(12 - ($sidebar-width + 1));
+  }
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    display: none;
+    z-index: 800;
+    width: 50%;
+  }
+  .article {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .article-thumb {
+    width: 100%;
+  }
+
+  .sidebar-toggle {
+    display: block;
   }
 }
