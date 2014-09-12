@@ -36,6 +36,45 @@ a {
   color: #0086B3;
 }
 
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.15em;
+}
+
+//TABLES
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  border-bottom: 1px solid #444;
+}
+
+td, th {
+  padding: 0 5px;
+  border-right: 1px solid #444;
+}
+
+td:last-child, th:last-child {
+  border-right: none;
+}
+
+p {
+
+}
+
 //UTILITY CLASSES
 .light {
   background: #eee;
@@ -191,11 +230,25 @@ a {
 }
 
 //HIGHLIGHT
-.highlight, blockquote {
+pre, blockquote {
   background: #ddd;
   padding: 5px 15px;
   border-left: 10px solid #aaa;
-  margin: 0;
+  margin: 0 0 10px 0;
+}
+
+pre, a {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+//EMOJI
+.article .emoji {
+  display: inline;
+  vertical-align: middle;
 }
 
 //RESPONSIVE OVERRIDE
