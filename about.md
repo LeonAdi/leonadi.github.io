@@ -18,4 +18,4 @@ Auf diesem Blog gibt es einige Artikel über "Dinge mit dem Computer". Er richte
 Wenn nicht Computer, dann muss meine Kamera her. Das mit dem Fotografieren betreibe ich zwar nicht so exzessiv wie das Programmieren, aber es macht mir auf jeden Fall Spaß.
 Das Bild oben auf der Seite ist übrigens auch von mir. Es ist im Flughafen Londen Heathrow aufgenommen.
 
-Wenn du mich jetzt noch ein bisschen stalken willst (keine Angst, ich freue mich darüber :wink:) kann ich dir meinen Blog http://leon.leonadi.de empfehlen. Da findest du auch ab und zu ein paar von meinen Bildern.
+Wenn du mich jetzt noch ein bisschen stalken willst (keine Angst, ich freue mich darüber :wink:) kann ich dir meinen [Blog](http://leon.leonadi.de) empfehlen. Da findest du auch ab und zu ein paar von meinen Bildern.
